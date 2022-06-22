@@ -1,8 +1,8 @@
 import random as r
 
+
 def sorteiaTema(dicTemas):
-    """Recebe um dicionario e retorna uma lista no formato [tema, palavra, palavra, palavra] com um tema
-    aleatório contido no dicionário recebido e palavras do respectivo tema."""
+    """Recebe um dicionario com temas de chave e lista de palavras como valor e retorna um desses temas, aleatoriamente e uma lista com as palavras do respectivo tema."""
     #dicionario = {'Animais':['cachorro','gato','peixe'],'Cores':['azul','vermelho','amarelo']}
     tema = r.choice(list(dicTemas))
     palavras = dicTemas.get(tema)
@@ -13,6 +13,6 @@ def sorteiaTema(dicTemas):
             indicesPalavras = indicesPalavras + [numeroAleatorio]
         if len(indicesPalavras) == 3:
             break
-    retorno = [tema, palavras[indicesPalavras[0]],
-               palavras[indicesPalavras[1]], palavras[indicesPalavras[2]]]
+    retorno = tema, [palavras[indicesPalavras[0]],
+                     palavras[indicesPalavras[1]], palavras[indicesPalavras[2]]]
     return retorno
