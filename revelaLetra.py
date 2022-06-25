@@ -4,7 +4,7 @@ def revelaLetra(palavra, palavraOculta, letra):
         aux = palavra.count(letra)
         for i in range(aux):
             indice = palavra.index(letra)
-            palavraOculta = palavraOculta[:indice] +
-            letra + palavraOculta[indice+1:]
+            palavraOculta = palavraOculta[:indice] + \
+                letra + palavraOculta[indice+1:]
             palavra = palavra[:indice]+"$"+palavra[indice+1:]
     return palavraOculta
