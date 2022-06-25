@@ -3,7 +3,6 @@ import random as r
 
 def sorteiaTema(dicTemas):
     """Recebe um dicionario com temas de chave e lista de palavras como valor e retorna um desses temas, aleatoriamente e uma lista com as palavras do respectivo tema."""
-    #dicionario = {'Animais':['cachorro','gato','peixe'],'Cores':['azul','vermelho','amarelo']}
     tema = r.choice(list(dicTemas))
     palavras = dicTemas.get(tema)
     indicesPalavras = []
